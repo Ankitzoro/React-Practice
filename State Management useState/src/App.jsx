@@ -1,28 +1,12 @@
-// App.js
-import React, { useState } from 'react';
+import React from 'react'
+import RegistrationForm from './components/RegistrationForm'
 
-function Counter() {
-  const [count, setCount] = useState(0);
-  const [message, setMessage] = useState('');
-
+const App = () => {
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Counter: {count}</h1>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
-      <button onClick={() => setCount(0)}>Reset</button>
-      
-      <div style={{ marginTop: '20px' }}>
-        <input 
-          type="text"
-          placeholder="Type a message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <p>Your message: {message}</p>
-      </div>
+    <div>
+      <RegistrationForm/>
     </div>
-  );
+  )
 }
 
-export default Counter;
+export default App
